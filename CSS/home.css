@@ -181,5 +181,13 @@
   .btn-white:hover { background: var(--primary-bg) !important; }
 
   @media (max-width: 860px) {
+    #hero { padding: 100px 20px 80px; } /* Reduced padding for mobile to "zoom out" the view */
+    .hero-title { margin-bottom: 18px; }
+    .hero-sub { font-size: 1.1rem; margin-bottom: 32px; }
+    .hero-btns { margin-bottom: 40px; }
+    .what-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; } /* 2 columns for better fit */
+    .what-chip { padding: 14px 12px; font-size: .88rem; gap: 8px; }
+    .what-chip .em { font-size: 1.25rem; }
+    
     .location-grid { grid-template-columns: 1fr; }
   }
