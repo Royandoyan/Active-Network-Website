@@ -1,4 +1,4 @@
-  .contact-section { background: var(--white); }
+  .contact-section { background: var(--white); padding-bottom: 48px; }
   .contact-wrap {
     display: grid; grid-template-columns: 1fr 1.15fr;
     gap: 52px; align-items: stretch; margin-top: 48px;
@@ -89,8 +89,12 @@
     overflow: hidden;
     border: 1.5px solid var(--border);
     box-shadow: var(--shadow);
+    height: 250px; /* Fixed height to crop the bottom */
   }
-  .map-container iframe { display: block; }
+  .map-container iframe { 
+    display: block;
+    margin-top: -10px; /* Shift up slightly to keep centered */
+  }
 
   .small-map { margin-top: 0; }
 
