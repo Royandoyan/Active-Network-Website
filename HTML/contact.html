@@ -83,53 +83,61 @@
         </div>
       </div>
 
-      <div class="form-card">
-        <h2>Send Us a Message</h2>
-        <p>Fill out the form below and our team will get back to you within one business day.</p>
-        <form id="contactForm">
-          
-          <div class="form-2col">
-            <div class="form-row">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="Full Name" placeholder="e.g. Maria Santos" required>
+      <div class="contact-form-side">
+        <div class="form-card">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and our team will get back to you within one business day.</p>
+          <form id="contactForm">
+            
+            <div class="form-2col">
+              <div class="form-row">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="Full Name" placeholder="e.g. Maria Santos" required>
+              </div>
+              <div class="form-row">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="Phone Number" placeholder="e.g. +63 917-123-4567" required>
+              </div>
             </div>
             <div class="form-row">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="Phone Number" placeholder="e.g. +63 917-123-4567" required>
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="Email" placeholder="e.g. maria@email.com">
             </div>
+            <div class="form-row">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="Service of Interest">
+                <option value="">— Select a Service —</option>
+                <option>Long-Term Care Residence</option>
+                <option>Short-Term Care Residence</option>
+                <option>Day Services</option>
+                <option>Balikbayan Retirement Services</option>
+                <option>Nursing Care Plans</option>
+                <option>Post-Hospital Recovery Care</option>
+                <option>Lifestyle &amp; Wellness Programs</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Message or Question</label>
+              <textarea id="message" name="Message" placeholder="How can we help you or your loved one?"></textarea>
+            </div>
+            <button type="submit" class="form-submit"><i class="fas fa-paper-plane" style="color: #fff;"></i> &nbsp; Send Inquiry</button>
+          </form>
+          <div id="form-success">
+            <i class="fas fa-check-circle" style="color: #27ae60;"></i> <strong>Thank you for reaching out!</strong><br>
+            We will contact you within 1 business day.<br><br>
+            For urgent matters, please call us at <strong>(+63) 945-3800-419</strong>.
           </div>
-          <div class="form-row">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="Email" placeholder="e.g. maria@email.com">
-          </div>
-          <div class="form-row">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="Service of Interest">
-              <option value="">— Select a Service —</option>
-              <option>Long-Term Care Residence</option>
-              <option>Short-Term Care Residence</option>
-              <option>Day Services</option>
-              <option>Balikbayan Retirement Services</option>
-              <option>Nursing Care Plans</option>
-              <option>Post-Hospital Recovery Care</option>
-              <option>Lifestyle &amp; Wellness Programs</option>
-              <option>General Inquiry</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="message">Message or Question</label>
-            <textarea id="message" name="Message" placeholder="How can we help you or your loved one?"></textarea>
-          </div>
-          <button type="submit" class="form-submit"><i class="fas fa-paper-plane" style="color: #fff;"></i> &nbsp; Send Inquiry</button>
-        </form>
-        <div id="form-success">
-          <i class="fas fa-check-circle" style="color: #27ae60;"></i> <strong>Thank you for reaching out!</strong><br>
-          We will contact you within 1 business day.<br><br>
-          For urgent matters, please call us at <strong>(+63) 945-3800-419</strong>.
+        </div>
+
+        <!-- MAP SECTION -->
+        <div class="map-container small-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3925.2895445622867!2d123.9044749!3d10.318697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9993e3a5a17d9%3A0x483754594aa4bdf9!2sRegus%20-%20Cebu%2C%20Apple%20One%20Equicom%20Tower!5e0!3m2!1sen!2sph!4v1774263180053!5m2!1sen!2sph" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
     </div>
+
   </div>
 </section>
 
