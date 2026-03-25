@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary:    #b71c1c; /* Slightly deeper Red for better contrast */
+  --primary-lt: #d32f2f; 
+  --primary-bg: #fff5f5; 
+  --black:      #121212; /* Deeper Black */
+  --text:       #1a1a1a; /* Almost Black for maximum readability */
+  --muted:      #4a4a4a; /* Darker muted text */
+  --bg-main:    #f5f5f7; /* Slightly more tinted off-white/gray */
+  --white:      #ffffff;
+  --card-bg:    #ffffff;
+  --border:     #d1d5db; /* Darker borders for better definition */
+  --radius:     18px;
+  --shadow:     0 4px 24px rgba(0,0,0,0.12);
+  
+  /* Aliases for compatibility */
+  --green:    var(--primary);
+  --green-lt: var(--primary-lt);
+  --green-bg: var(--primary-bg);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 115%; } /* Scales up all rem values globally */
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem; /* Base text size is now larger */
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── NAV ─── */
+#navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--black);
+  border-bottom: 2px solid #333;
+  padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+  box-shadow: 0 2px 14px rgba(0,0,0,.15);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Lora', serif;
+  font-weight: 700; font-size: 1.15rem;
+  color: var(--white); text-decoration: none;
+}
+.nav-logo img {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: #e5e7eb;
+  font-weight: 700; font-size: .95rem;
+  padding: 8px 13px; border-radius: 10px;
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: var(--primary); color: var(--white); }
+.nav-cta {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+}
+.nav-cta:hover,
+.nav-cta.active { background: var(--primary-lt) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+.hamburger span { display: block; width: 28px; height: 3px; background: var(--white); border-radius: 3px; }
+
+/* ─── PAGE BANNER ─── */
+.page-banner {
+  background: var(--white);
+  padding: 64px 32px 58px; text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.page-banner h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700; color: var(--primary);
+  max-width: 720px; margin: 12px auto 14px; line-height: 1.25;
+}
+.page-banner p {
+  font-size: 1.08rem; color: var(--muted);
+  max-width: 600px; margin: 0 auto;
+}
+
+/* ─── SHARED ─── */
+.section { padding: 76px 32px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-tag {
+  display: inline-block;
+  background: var(--primary-bg); color: var(--primary);
+  font-weight: 800; font-size: .82rem;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700; color: var(--primary); margin-bottom: 12px;
+}
+.section-body { font-size: 1.05rem; color: var(--muted); max-width: 680px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; border-radius: 40px;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+  cursor: pointer; text-decoration: none; border: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.13); }
+.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
+.btn-primary:hover { background: var(--white); color: var(--primary); }
+.btn-secondary { background: var(--white); color: var(--primary); border: 2px solid var(--primary); }
+.btn-secondary:hover { background: var(--primary); color: var(--white); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--black); color: #cbd5e1;
+  padding: 52px 32px 32px; text-align: center;
+}
+.footer-logo {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: 'Lora', serif; font-size: 1.4rem;
+  font-weight: 700; color: var(--white); margin-bottom: 6px;
+}
+.footer-logo img {
+  width: 32px; height: 32px; border-radius: 8px; object-fit: cover;
+}
+.footer-tagline { font-size: .97rem; color: #94a3b8; font-style: italic; margin-bottom: 26px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px; }
+.footer-links a {
+  color: #cbd5e1; text-decoration: none; font-weight: 600; font-size: .92rem;
+  padding: 4px 12px; border-radius: 20px; border: 1px solid #333;
+  transition: background .2s, border-color .2s;
+}
+.footer-links a:hover { background: var(--primary); border-color: var(--primary); color: var(--white); }
+.footer-copy { font-size: .85rem; color: #64748b; }
+
+/* ─── MOBILE ─── */
+@media (max-width: 860px) {
+  html { font-size: 105%; } /* Slightly smaller scale for mobile, but still bigger than before */
+  body { font-size: 1.05rem; }
+  #navbar { padding: 0 20px; }
+  .nav-links {
+    display: none; flex-direction: column;
+    position: absolute; top: 72px; left: 0; right: 0;
+    background: var(--black); border-top: 1px solid #333;
+    padding: 14px 20px; gap: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+  .section { padding: 52px 20px; }
+  .page-banner { padding: 48px 20px 44px; }
+}
